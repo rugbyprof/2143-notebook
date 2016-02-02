@@ -13,6 +13,7 @@ class Menu:
             "4": self.modify_note,
             "5": self.quit
         }
+        
 
     def display_menu(self):
         print("""
@@ -60,9 +61,10 @@ class Menu:
         if tags:
             self.notebook.modify_tags(id, tags)
 
-        def quit(self):
-            print("Thank you for using your notebook today.")
-            sys.exit(0)
+    def quit(self):
+        print("Thank you for using your notebook today.")
+        sys.exit(0)
 
 if __name__ == "__main__":
     Menu().run()
+    

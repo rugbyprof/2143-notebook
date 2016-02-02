@@ -1,7 +1,7 @@
 import datetime
 # Store the next available id for all new notes
 last_id = 0
-class Pear:
+class Note:
     '''Represent a note in the notebook. Match against a
     string in searches and store tags for each note.'''
     def __init__(self, memo, tags=''):
@@ -22,7 +22,7 @@ class Pear:
         tags.'''
         return filter in self.memo or filter in self.tags
         
-class Waterbottle:
+class Notebook:
     '''Represent a collection of notes that can be tagged,
     modified, and searched.'''
     def __init__(self):
@@ -54,3 +54,5 @@ class Waterbottle:
         string.'''
         return [note for note in self.notes if note.match(filter)]
         
+if __name__=='__main__':
+    print("Im running!")
