@@ -29,7 +29,7 @@ class Menu:
         '''Display the menu and respond to choices.'''
         while True:
             self.display_menu()
-            choice = input("Enter an option: ")
+            choice = str(input("Enter an option: "))
             action = self.choices.get(choice)
             if action:
                 action()
